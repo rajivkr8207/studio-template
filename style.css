@@ -35,6 +35,17 @@ body {
   --textgray: #737270;
 }
 
+section {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+header,
+footer {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
 header {
   width: 100%;
 }
@@ -53,12 +64,48 @@ header nav .logo {
 }
 header nav .navlinks {
   display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 header nav .navlinks ul {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  list-style: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+header nav .navlinks ul li {
+  padding: 0.8rem 1rem;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 1px;
+}
+header nav .navlinks ul li span {
+  background-color: var(--yellow);
+  border-radius: 50px;
+  padding: 0 0.2rem;
+  color: black;
+}
+header nav .navlinks button {
+  padding: 0.8rem 1rem;
+  background-color: #cebd63;
+  color: black;
+  border: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0.6rem;
+}
+header nav .navlinks button:hover {
+  background-color: #ad9d49;
 }
 header nav .mob-btn {
   display: flex;
@@ -91,16 +138,6 @@ header nav .mob-btn i {
   border: none;
   padding: 10px 15px;
   border-radius: 10px;
-}
-
-section {
-  max-width: 2000px;
-  margin: 0 auto;
-}
-
-header {
-  max-width: 2000px;
-  margin: 0 auto;
 }
 
 main #view1 {
@@ -425,30 +462,33 @@ main #view6 .right-content .bottom-con button span {
   color: white;
 }
 main #view7 {
+  padding: 20px;
+}
+main #view7 .get-in-touch {
   width: 100%;
   padding: 1.75rem;
   border-radius: 20px;
   background-color: #cebd63;
 }
-main #view7 .center {
+main #view7 .get-in-touch .center {
   display: flex;
   justify-content: space-between;
   align-items: start;
   flex-direction: column;
 }
-main #view7 .center .left-con {
+main #view7 .get-in-touch .center .left-con {
   width: 80%;
   text-transform: uppercase;
   color: black;
 }
-main #view7 .center .left-con .head {
+main #view7 .get-in-touch .center .left-con .head {
   font-size: 1rem;
   margin-bottom: 0.6rem;
 }
-main #view7 .center .left-con .con {
+main #view7 .get-in-touch .center .left-con .con {
   font-size: 2.5rem;
 }
-main #view7 .center button {
+main #view7 .get-in-touch .center button {
   width: 100%;
   padding: 1.3rem 2rem;
   font-size: 1rem;
@@ -466,11 +506,126 @@ main #view7 .center button {
   gap: 0.6rem;
   flex-shrink: 0;
 }
-main #view7 .center button span {
+main #view7 .get-in-touch .center button span {
   font-size: 1.4rem;
 }
 
+footer {
+  padding: 20px;
+}
+footer .mainfooter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+footer .mainfooter .leftbox {
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+}
+footer .mainfooter .leftbox p {
+  font-size: 1.3rem;
+}
+footer .mainfooter .leftbox .top-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+footer .mainfooter .leftbox .top-links i {
+  padding: 0.6rem;
+  border-radius: 50px;
+  background-color: rgba(99, 99, 99, 0.397);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 2px solid #737270;
+  font-size: 1rem;
+}
+footer .mainfooter .maintop {
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+footer .mainfooter .maintop div {
+  width: 100%;
+  height: 100%;
+}
+footer .mainfooter .maintop div p {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+footer .mainfooter .maintop div ul {
+  list-style: none;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  opacity: 0.6;
+  letter-spacing: 1px;
+}
+footer .mainfooter .maintop div .mor-tem {
+  background-color: #cebd63;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+footer .mainfooter .maintop div .mor-tem:hover {
+  background-color: #ad9d49;
+}
+footer .mainfooter .bottomfooter {
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+footer .mainfooter .bottomfooter span {
+  opacity: 0.6;
+}
+footer .mainfooter .bottomfooter .top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+footer .mainfooter .bottomfooter .top i {
+  padding: 0.6rem;
+  border-radius: 50px;
+  background-color: rgba(99, 99, 99, 0.397);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 2px solid #737270;
+  font-size: 1rem;
+}
+
 @media (min-width: 900px) {
+  header nav .navlinks {
+    display: flex;
+  }
+  header nav .mob-btn {
+    display: none;
+  }
   main #view1 {
     flex-direction: row;
   }
@@ -549,19 +704,41 @@ main #view7 .center button span {
   main #view6 .right-content .bottom-con h1 {
     font-size: 3rem;
   }
-  main #view7 {
+  main #view7 .get-in-touch {
     padding: 4rem;
   }
-  main #view7 .center {
+  main #view7 .get-in-touch .center {
     flex-direction: row;
     align-items: end;
   }
-  main #view7 .center .left-con .con {
+  main #view7 .get-in-touch .center .left-con .con {
     line-height: 1;
     font-size: 5rem;
   }
-  main #view7 .center button {
+  main #view7 .get-in-touch .center button {
     width: auto;
     padding: 1rem 1.5rem;
+  }
+  footer .mainfooter {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas: "leftbox mainbox" "leftbox btmfotter";
+    gap: 0.6rem;
+  }
+  footer .mainfooter .leftbox {
+    grid-area: leftbox;
+  }
+  footer .mainfooter .maintop {
+    grid-area: mainbox;
+    flex-direction: row;
+  }
+  footer .mainfooter .maintop div {
+    width: 30%;
+  }
+  footer .mainfooter .bottomfooter {
+    grid-area: btmfotter;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=style.css.map */
