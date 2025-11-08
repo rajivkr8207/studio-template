@@ -20,6 +20,7 @@ body {
 
 html {
   font-size: clamp(14px, 1vw, 18px);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -57,13 +58,36 @@ header nav {
   gap: 1rem;
   justify-content: space-between;
   padding: 1rem 1.2rem;
+  position: relative;
 }
 header nav .logo {
   font-size: 1.3rem;
   text-transform: uppercase;
 }
-header nav .navlinks {
+header nav .desklink {
   display: none;
+}
+header nav .mobilelinks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  position: absolute;
+  top: 90%;
+  right: 20%;
+  background-color: #121212;
+  transition: all 0.5s ease-in;
+}
+header nav .mobilelinks ul {
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  text-align: right;
+}
+header nav .hidden {
+  top: -500%;
+}
+header nav .navlinks {
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -138,6 +162,9 @@ header nav .mob-btn i {
   border: none;
   padding: 10px 15px;
   border-radius: 10px;
+}
+header nav #close {
+  display: none;
 }
 
 main #view1 {
@@ -555,7 +582,6 @@ footer .mainfooter .maintop {
 }
 footer .mainfooter .maintop div {
   width: 100%;
-  height: 100%;
 }
 footer .mainfooter .maintop div p {
   font-size: 1.4rem;
@@ -624,6 +650,9 @@ footer .mainfooter .bottomfooter .top i {
     display: flex;
   }
   header nav .mob-btn {
+    display: none;
+  }
+  header nav .mobilelinks {
     display: none;
   }
   main #view1 {
